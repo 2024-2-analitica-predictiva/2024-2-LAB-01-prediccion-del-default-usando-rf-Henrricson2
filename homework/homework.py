@@ -92,3 +92,18 @@
 # {'type': 'cm_matrix', 'dataset': 'train', 'true_0': {"predicted_0": 15562, "predicte_1": 666}, 'true_1': {"predicted_0": 3333, "predicted_1": 1444}}
 # {'type': 'cm_matrix', 'dataset': 'test', 'true_0': {"predicted_0": 15562, "predicte_1": 650}, 'true_1': {"predicted_0": 2490, "predicted_1": 1420}}
 #
+
+def load_data():
+    import pandas as pd
+    data_test=pd.read_csv("files\input\test_data.csv.zip",
+                          index_col=False,
+                          compression="zip")
+    data_traint=pd.read_csv("files\input\train_data.csv.zip", 
+                            index_col=False, 
+                            compression="zip")
+    
+    return data_test,data_traint
+
+import pandas as pd
+
+
